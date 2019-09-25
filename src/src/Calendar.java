@@ -1,5 +1,3 @@
-package src;
-
 import java.lang.*;
 import java.time.LocalDate;
 
@@ -21,8 +19,13 @@ public class Calendar {
                 date = LocalDate.of(year, month, day);
             } catch (Exception e) {
                 System.out.println("The input data is incorrect"); //якщо введено невірно - користувач буде повідомлений
+                return;
             }
+        } else if (args.length > 1){
+            System.out.println("The input data is incorrect");
+            return;
         }
+        //якщо введено невірно - користувач буде повідомлений
         printCalendarMonth(date, currentDate);
     }
 
